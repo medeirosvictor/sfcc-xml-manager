@@ -1,0 +1,9 @@
+{% extends 'layouts/a.html' %}
+
+{% block content %}
+    <h1 class="text-red-500 text-4xl text-center mt-10">Upload your catalog or library export</h1>
+    {{title}}
+    {% include 'partials/upload_xml_form.html' %}
+    {{content}}
+{% endblock %}
+

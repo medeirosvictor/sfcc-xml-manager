@@ -22,5 +22,6 @@ from a_sxm.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view),
+    path('upload-xml', upload_xml),
     path('__reload__/', include("django_browser_reload.urls"))
 ]
