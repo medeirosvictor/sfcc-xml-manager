@@ -1,9 +1,16 @@
 {% extends 'layouts/a.html' %}
 
 {% block content %}
-    <h1 class="text-red-500 text-4xl text-center mt-10">Upload your catalog or library export</h1>
-    {{title}}
+    <h1 class="text-[#0e3963] font-bold text-4xl text-center mb-5">SFCC XML Manager</h1>
+    <h2 class="text-[#0e3963] font-bold text-2xl text-center">Upload your catalog or library export</h2>
     {% include 'partials/upload_xml_form.html' %}
-    {{content}}
+
+    <div class="text-center font-semibold text-2xl my-10">Previous uploads:</div>
+    {% for xml in xmls  %}
+        <div class="flex justify-center">
+            {{xml.file_name}}
+        </div>
+    {% endfor %}
+    
 {% endblock %}
 
