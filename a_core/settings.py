@@ -49,7 +49,7 @@ INTERNAL_IPS = [
     '127.0.0.1',
 ]
 
-NPM_BIN_PATH = "C:\\Program Files\\nodejs\\npm.cmd"
+NPM_BIN_PATH = "/home/victor/.nvm/versions/node/v21.6.2/bin/node"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
