@@ -31,6 +31,14 @@ def upload_xml(request):
                 #print(file_content)
                 namespace = root.nsmap.get(None)
                 print(namespace)
+                # before sending info back to FD I need to 
+                # get useful data, what kind of export is it? How many Xs in it?
+                # For now focusing on product definitions and its attributes
+                # Use cases: Mass change product ids, adding prefixes,
+                # Standardize image paths
+                # Keep only product tags in the XML
+                # Remove certain attribute tags from the XML (specific updates for products)
+
                 return  render(request, 'a_sxm/xmlmanager.html', {'file_content': file_content})
             except etree.XMLSyntaxError as e:
                 return HttpResponse('XMLerror')
